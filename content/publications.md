@@ -131,9 +131,10 @@ selected: yes
 
 ### 2026 | KAN-SegFormer: Kolmogorov-Arnold Decoding for Brain Tumor Segmentation
 authors: Van Hieu Dao, **Van Thong Huynh**
-venue: MIWAI 2026, Lecture Notes in Artificial Intelligence (Springer)
+venue: Multi-disciplinary Trends in Artificial Intelligence (MIWAI 2026), Lecture Notes in Artificial Intelligence, pp. 489–501 (Springer)
 venue_short: MIWAI 2026
 series: LNAI
+link: https://link.springer.com/chapter/10.1007/978-981-92-6510-7_37
 
 ### 2026 | CF-Net: Conflict Fusion with Speaker Normalization and Certainty Weighting for Hesitancy Recognition
 authors: Tung Hung Bui, **Hong Hai Nguyen**, **Van Thong Huynh**
