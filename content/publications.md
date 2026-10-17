@@ -45,9 +45,11 @@ authors: Thanh Tri Pham, **Hong Hai Nguyen**, **Thi Thuy Pham**, **Trong Nghia N
 
 ### Ongoing | Decomposing Facial Emotion Recognition Accuracy with a Leakage-Safe Instrument
 authors: **Hong Hai Nguyen**, Thanh Tri Pham, **Quoc Tien Nguyen**, Hyungjeong Yang, Soohyung Kim, **Van Thong Huynh**
+code: https://github.com/CPR3search/Decomposing-FER-accuracy
 
 ### Ongoing | Input Calibration and Algorithm Choice in Subject-Incremental EEG Emotion Recognition
 authors: Kim Truyen Huynh, **Hong Hai Nguyen**, **Van Thong Huynh**
+code: https://github.com/CPR3search/Subj-IL-EEG
 
 ---
 

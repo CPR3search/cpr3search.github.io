@@ -30,8 +30,21 @@
 
     <title>CPR — {{PAPER_TITLE}}</title>
     <meta name="description" content="{{META_DESCRIPTION}}">
+    <!-- TEMPLATE ONLY: delete the next line on the real page so search engines index it -->
     <meta name="robots" content="noindex, nofollow">
     <link rel="canonical" href="https://cpr.ai.vn/{{PAGE_SLUG}}.html">
+
+    <!-- Google Scholar indexing: one citation_author line per author ("Family, Given").
+         Fill these once the paper is published; delete any line you have no value for. -->
+    <meta name="citation_title" content="{{FULL_PAPER_TITLE}}">
+    <meta name="citation_author" content="{{AUTHOR_1_FAMILY}}, {{AUTHOR_1_GIVEN}}">
+    <meta name="citation_publication_date" content="{{YEAR}}">
+    <meta name="citation_conference_title" content="{{PROCEEDINGS_TITLE}}">
+    <meta name="citation_firstpage" content="{{FIRST_PAGE}}">
+    <meta name="citation_lastpage" content="{{LAST_PAGE}}">
+    <meta name="citation_doi" content="{{DOI}}">
+    <meta name="citation_pdf_url" content="{{OPEN_PDF_URL}}">
+    <meta name="citation_abstract_html_url" content="https://cpr.ai.vn/{{PAGE_SLUG}}.html">
 
     <!-- Open Graph / Twitter -->
     <meta property="og:type" content="article">
