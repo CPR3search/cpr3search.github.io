@@ -143,12 +143,14 @@ authors: Tung Hung Bui, **Hong Hai Nguyen**, **Van Thong Huynh**
 venue: ABAW Workshop at ECCV 2026, Lecture Notes in Computer Science (Springer)
 venue_short: ABAW @ ECCV 2026
 series: LNCS
+code: https://github.com/CPR3search/AH-ABAW-11th
 
 ### 2026 | Parameter-Isolated Experts for Multi-Task Affect Recognition
 authors: Tung Hung Bui, **Hong Hai Nguyen**, **Van Thong Huynh**
 venue: ABAW Workshop at ECCV 2026, Lecture Notes in Computer Science (Springer)
 venue_short: ABAW @ ECCV 2026
 series: LNCS
+code: https://github.com/CPR3search/MTL-ABAW-11th
 
 ### 2025 | MediFusion-Flex: An Adaptive Multimodal Deep Learning Framework for Clinical Deterioration Prediction in Emergency Medicine
 authors: **Trong-Nghia Nguyen**, **Hong-Hai Nguyen**, **Ngoc Tu Vu**, Tuan Anh Tran, Soo-Hyung Kim, Bo-Gun Kho, **Van-Thong Huynh**
