@@ -84,7 +84,9 @@ Start from `templates/`: a generic page, a member profile, or a paper page. `tem
 
 ## Search engines
 
-The site is kept out of search engines on purpose: `robots.txt` disallows all crawling and every page carries `<meta name="robots" content="noindex, nofollow">`. Remove both to make it indexable.
+Search engines may index the site. `robots.txt` points them to `sitemap.xml`, which lists every public page; add new pages there. The 404 page, the old-URL redirects and everything in `templates/` keep `<meta name="robots" content="noindex, nofollow">`, so delete that line when you create a real page from a template.
+
+Paper pages also carry Google Scholar `citation_*` meta tags (see `pain-presence.html`); fill them in once a paper is published so Scholar can index it.
 
 ## Deploy
 

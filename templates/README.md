@@ -49,4 +49,4 @@ Content-driven lists (papers, people, awards, news) are built by `js/ui.js`, so 
 
 ## Before publishing
 
-Serve the site locally (`python3 -m http.server`), check the page in light and dark mode and at phone width, then commit.
+Delete the `<meta name="robots" content="noindex, nofollow">` line (the templates keep it so they stay out of search results), add the page to `sitemap.xml`, and on a paper page fill in the `citation_*` tags for Google Scholar. Then serve the site locally (`python3 -m http.server`), check the page in light and dark mode and at phone width, then commit.
