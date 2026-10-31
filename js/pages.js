@@ -26,6 +26,7 @@ var Pages = (function () {
 
     function done(el) {
         if (window.SITE && SITE.reveal) SITE.reveal(el);
+        if (window.SITE && SITE.decodeEmails) SITE.decodeEmails(el);
     }
 
     /* Content renders after load, so re-apply a #hash jump once targets exist */

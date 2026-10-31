@@ -136,7 +136,10 @@ var UI = (function () {
         opts = opts || {};
         var url = profileUrl(p);
         var name = url ? '<a' + linkAttrs(url) + '>' + esc(p.name) + '</a>' : esc(p.name);
-        var buttons =
+        var email = p.email_encoded
+            ? '<a class="btn-link js-email" data-email="' + esc(p.email_encoded) + '" data-keep-label href="#">Email</a>'
+            : '';
+        var buttons = email +
             button(!isExternal(url) ? 'Profile' : /scholar\.google/.test(url) ? 'Scholar' : 'Website', url) +
             button('Scholar', p.scholar) + button('GitHub', p.github) + button('Website', p.website);
         return '<article class="card person' + (opts.lead ? ' person--lead' : '') + '">' +

@@ -10,6 +10,9 @@
        interests: one short line of research interests
        link:      profile page (members/<id>.html) or personal website
        scholar / github / website: extra icon links
+       email_encoded: email address reversed, then base64-encoded, so
+                  harvesters cannot read it from the file or the page. Make it with
+                  python3 -c "import base64,sys;print(base64.b64encode(sys.argv[1][::-1].encode()).decode())" name@domain
        aliases:   other spellings of the name used in author lists,
                   separated by ";". They let profile pages find every paper
                   and highlight the person in author lists site-wide.
@@ -26,6 +29,7 @@ interests: Causal reasoning for perception, affective computing, multimodal lear
 link: members/vthuynh.html
 scholar: https://scholar.google.com/citations?user=sEMY7OoAAAAJ
 github: https://github.com/th2l
+email_encoded: bnYudWRlLmVmQDR2aGdub2h0
 aliases: Van Thong Huynh; Huynh, V. T.
 
 ## Members
