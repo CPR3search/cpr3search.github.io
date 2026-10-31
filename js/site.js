@@ -83,6 +83,23 @@ var SITE = {
     }
     SITE.reveal = reveal;
 
+    /* Protected email links: <a class="js-email" data-email="..."> where
+       data-email is the address reversed, then base64-encoded. The plain
+       address never appears in the page source, so simple harvesters that
+       scan HTML for "name@domain" do not find it. The link text becomes the
+       address unless the link has data-keep-label (e.g. a small "Email"
+       button). Pages that render content later call SITE.decodeEmails(el). */
+    function decodeEmails(root) {
+        (root || document).querySelectorAll('a.js-email[data-email]').forEach(function (a) {
+            try {
+                var addr = atob(a.getAttribute('data-email')).split('').reverse().join('');
+                a.href = 'mailto:' + addr;
+                if (!a.hasAttribute('data-keep-label')) a.textContent = addr;
+            } catch (e) { /* leave the placeholder label */ }
+        });
+    }
+    SITE.decodeEmails = decodeEmails;
+
     document.addEventListener('DOMContentLoaded', function () {
         /* Footer */
         var main = document.querySelector('main');
@@ -137,17 +154,8 @@ var SITE = {
         }
         reveal(document);
 
-        /* Protected email links: <a class="js-email" data-email="..."> where
-           data-email is the address reversed, then base64-encoded. The plain
-           address never appears in the page source, so simple harvesters that
-           scan HTML for "name@domain" do not find it. */
-        document.querySelectorAll('a.js-email[data-email]').forEach(function (a) {
-            try {
-                var addr = atob(a.getAttribute('data-email')).split('').reverse().join('');
-                a.href = 'mailto:' + addr;
-                a.textContent = addr;
-            } catch (e) { /* leave the "Email" placeholder */ }
-        });
+        /* Protected email links written in the HTML */
+        decodeEmails(document);
 
         /* Back to top */
         var back = document.createElement('button');
