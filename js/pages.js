@@ -297,7 +297,12 @@ var Pages = (function () {
                     }).join('') + '</div>';
                 } else {
                     body = '<div class="card-grid card-grid--two">' + s.entries.map(function (e) {
-                        return '<article class="card card--text"><h3>' + UI.esc(e.head.join(' | ')) + '</h3><p>' + UI.inline(e.text) + '</p></article>';
+                        var f = e.fields;
+                        return '<article class="card card--text"><h3>' + UI.esc(e.head.join(' | ')) + '</h3><p>' + UI.inline(e.text) + '</p>' +
+                            (f['for'] ? '<p class="meta-line"><span class="meta-label">For</span>' + UI.inline(f['for']) + '</p>' : '') +
+                            (f.lead ? '<p class="meta-line"><span class="meta-label">Lead</span>' + UI.inline(f.lead) + '</p>' : '') +
+                            (f.link ? '<div class="tag-row">' + UI.button('Learn more', f.link) + '</div>' : '') +
+                            '</article>';
                     }).join('') + '</div>';
                 }
                 return '<section class="section fade-in">' + UI.sectionLabel(s.name) + body + '</section>';
