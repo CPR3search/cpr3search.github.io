@@ -305,9 +305,10 @@ var Pages = (function () {
                             '</article>';
                     }).join('') + '</div>';
                 }
-                return '<section class="section fade-in">' + UI.sectionLabel(s.name) + body + '</section>';
+                return '<section class="section fade-in" id="' + Content.slug(s.name) + '">' + UI.sectionLabel(s.name) + body + '</section>';
             }).join('');
             done(el);
+            jumpToHash();
         });
     }
 
