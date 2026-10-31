@@ -137,6 +137,18 @@ var SITE = {
         }
         reveal(document);
 
+        /* Protected email links: <a class="js-email" data-email="..."> where
+           data-email is the address reversed, then base64-encoded. The plain
+           address never appears in the page source, so simple harvesters that
+           scan HTML for "name@domain" do not find it. */
+        document.querySelectorAll('a.js-email[data-email]').forEach(function (a) {
+            try {
+                var addr = atob(a.getAttribute('data-email')).split('').reverse().join('');
+                a.href = 'mailto:' + addr;
+                a.textContent = addr;
+            } catch (e) { /* leave the "Email" placeholder */ }
+        });
+
         /* Back to top */
         var back = document.createElement('button');
         back.type = 'button';
