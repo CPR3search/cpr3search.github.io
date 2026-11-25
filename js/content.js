@@ -100,11 +100,14 @@ var Content = (function () {
             sections.forEach(function (s) {
                 var type = typeOf(s.name);
                 s.entries.forEach(function (e) {
+                    var ongoing = isNaN(parseInt(e.head[0], 10));
+                    /* SITE.showOngoing (js/site.js) switches work in preparation on or off site-wide */
+                    if (ongoing && !(window.SITE && SITE.showOngoing)) return;
                     out.push(assign({
                         type: type,
                         year: e.head[0],
                         title: e.head.slice(1).join(' | '),
-                        ongoing: isNaN(parseInt(e.head[0], 10))
+                        ongoing: ongoing
                     }, e.fields));
                 });
             });
