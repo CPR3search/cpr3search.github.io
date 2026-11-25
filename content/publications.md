@@ -2,7 +2,8 @@
 
 <!-- ## sections set the type filter (Ongoing / Journal / Conference / Patent).
      Each entry:
-       ### YEAR | Title          (use "Ongoing" instead of a year for work in preparation)
+       ### YEAR | Title          (use "Ongoing" instead of a year for work in preparation;
+                                 these are hidden on the site while SITE.showOngoing is false in js/site.js)
        authors:     lab members in **bold** (also auto-highlighted via aliases in people.md)
        venue:       full venue name
        venue_short: short badge, e.g. CVPR 2026

@@ -15,6 +15,9 @@ var SITE = {
     shortName: 'CPR',
     tagline: 'A research group in Ho Chi Minh City, Vietnam, working on causal reasoning for machine perception.',
     email: 'contact@cpr.ai.vn',
+    /* Show "Ongoing" (in preparation) entries from content/publications.md?
+       false hides them everywhere: Publications, profiles and Research. */
+    showOngoing: false,
     /* Root-relative so they resolve from any depth (e.g. /members/x.html) */
     logo: '/logo.svg',
     footerLogo: '/logo_full_dark.png',
